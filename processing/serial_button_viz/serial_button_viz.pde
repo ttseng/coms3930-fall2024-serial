@@ -23,7 +23,7 @@ void draw()
   textSize(128);
   
   if (myPort.available() > 0) {  
-    val = myPort.readStringUntil('\n');  
+    val = myPort.readStringUntil('\n').trim();  
   }
   if (val != null){
     println(val);
